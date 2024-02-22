@@ -1,10 +1,8 @@
 # string_lib_asm
-A library of standard asm functions.
+A collection of assembly language helper functions, offering functionality that closely parallels the string manipulation capabilities found in the C standard library's `string.h`.
 
-## Task
-This is one of your very rare opportinuty to be that person: "wowww, they know how to read assembly."
-
-Write assembly language scripts with the same functionality as the following standard C library functions:
+## Description
+List of functions included in the library:
 - strlen      -> my_strlen
 - strchr      -> my_strchr
 - memset      -> my_memset
@@ -19,10 +17,10 @@ Write assembly language scripts with the same functionality as the following sta
 - read        -> my_read
 - write       -> my_write 
 
-## Description
 Each assembly function is contained in its own function_name.S file, compiled together with, and called by parallel functions in my_libasm.c using the included Makefile.
 
 ## Installation
+The Makefile and assembly language functions are written for a Linux, X86-40  environment. T
 Make sure you have all required directories as well as the Makefile available:
 /build
 /inc
@@ -56,7 +54,7 @@ Run the program:
 
 ### The Core Team
 
-Mathius Johnson and Rebecca Whipple Silverstein
+Rebecca Whipple Silverstein and Mathius Johnson
 
 
 <span><i>Made at <a href='https://qwasar.io'>Qwasar SV -- Software Engineering School</a></i></span>
