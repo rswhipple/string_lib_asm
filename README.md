@@ -18,11 +18,11 @@ The library implements the following functions:
 - `read` replicated as `my_read`
 - `write` replicated as `my_write`
 
-Each function is contained within its own `.s` file, with parallel C functions in `my_libasm.c` for calling the assembly functions. The  managed via an included Makefile for automation.
+Each function is contained within its own `.s` file, with parallel C functions in `my_libasm.c` for calling the assembly functions. The automated build process creates an executable program as well as static and dynamic libraries.
 
 ## Installation
 
-Designed for Linux systems with an X86-64 architecture, to compile the library and its components, run the Makefile from the project repository.
+Designed for Linux systems with an X86-64 architecture. To compile the library and its components, run the Makefile from the project repository.
 
 Compile:
 
@@ -38,11 +38,11 @@ make fclean
 
 ## Usage Guidelines
 
-The static and dynamic libraries can be used with any C program on Linuz systems with X86-64 architecture. 
+The static and dynamic libraries can be used with any C program on Linux systems with X86-64 architecture. 
 
 Within the `my_libasm` program, each assembly function is callable from a corresponding C function, with a standardized naming convention, e.g., `asm_strlen()` in C calls `my_strlen()` in assembly.
 
-To run the unit tests for each function through the `main()` in `my_libasm.c`:
+Run the unit tests for each function via the `main()` in `my_libasm.c`:
 
 ```bash
 ./my_libasm
