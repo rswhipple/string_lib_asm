@@ -1,61 +1,67 @@
 # string_lib_asm
-A collection of assembly language helper functions, offering functionality that closely parallels the string manipulation capabilities found in the C standard library's `string.h`.
+
+Welcome to `string_lib_asm`, A collection of assembly language helper functions, offering functionality that closely parallels the string manipulation capabilities found in the C standard library's `string.h`.
 
 ## Description
-List of functions included in the library:
-- strlen      -> my_strlen
-- strchr      -> my_strchr
-- memset      -> my_memset
-- memcpy      -> my_memcpy
-- strcmp      -> my_strcmp
-- memmove     -> my_memmove
 
-- strncmp     -> my_strncmp
-- strcasecmp  -> my_strcasecmp
-- index       -> my_index
+The library implements the following functions:
 
-- read        -> my_read
-- write       -> my_write 
+- `strlen` replicated as `my_strlen`
+- `strchr` replicated as `my_strchr`
+- `memset` replicated as `my_memset`
+- `memcpy` replicated as `my_memcpy`
+- `strcmp` replicated as `my_strcmp`
+- `memmove` replicated as `my_memmove`
+- `strncmp` replicated as `my_strncmp`
+- `strcasecmp` replicated as `my_strcasecmp`
+- `index` replicated as `my_index`
+- `read` replicated as `my_read`
+- `write` replicated as `my_write`
 
-Each assembly function is contained in its own function_name.S file, compiled together with, and called by parallel functions in my_libasm.c using the included Makefile.
+Each function is contained within its own `.s` file, with parallel C functions in `my_libasm.c` for calling the assembly functions. The  managed via an included Makefile for automation.
 
 ## Installation
-The Makefile and assembly language functions are written for a Linux, X86-40  environment. T
-Make sure you have all required directories as well as the Makefile available:
-/build
-/inc
-/src_asm
-/src_c
 
-Compile the program:
-```
--> make
-```
-Clean up:
-```
--> make fclean
+Designed for Linux systems with an X86-64 architecture, to compile the library and its components, run the Makefile from the project repository.
+
+Compile:
+
+```bash
+make
 ```
 
-## Usage
-Each .S function has a parallel .c function. The .c calls the .S and passes arguments.
+Clean up compiled objects and libraries:
 
-Naming convention example:
-
-.c func = asm_strlen()
-
-.S func = my_strlen()
-
-There are a series of tests in the main() located in my_libasm.c, one test per function.
-
-Run the program:
+```bash
+make fclean
 ```
+
+## Usage Guidelines
+
+The static and dynamic libraries can be used with any C program on Linuz systems with X86-64 architecture. 
+
+Within the `my_libasm` program, each assembly function is callable from a corresponding C function, with a standardized naming convention, e.g., `asm_strlen()` in C calls `my_strlen()` in assembly.
+
+To run the unit tests for each function through the `main()` in `my_libasm.c`:
+
+```bash
 ./my_libasm
 ```
 
-### The Core Team
+## Demonstrated Skills
 
+- **Advanced Assembly Programming**: Developed assembly language functions for string manipulation, showcasing knowledge of low-level programming.
+  
+- **Library Development**: Proficient in creating both static and dynamic libraries, enabling distribution and reusability of code across projects.
+
+- **Build Automation**: Implemented an automated build process using Makefile, showing the ability to streamline the compilation and linking of complex projects.
+
+- **Cross-Language Integration**: Integrated assembly routines with C, highlighting an understanding of language interoperability.
+
+
+### The Core Team
+Group project created by:
 Rebecca Whipple Silverstein and Mathius Johnson
 
 
 <span><i>Made at <a href='https://qwasar.io'>Qwasar SV -- Software Engineering School</a></i></span>
-<span><img alt='Qwasar SV -- Software Engineering School's Logo' src='https://storage.googleapis.com/qwasar-public/qwasar-logo_50x50.png' width='20px' /></span>
