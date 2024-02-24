@@ -1,6 +1,6 @@
 # string_lib_asm
 
-Welcome to `string_lib_asm`, A collection of assembly language helper functions, offering functionality that closely parallels the string manipulation capabilities found in the C standard library's `string.h`.
+Welcome to `string_lib_asm`, a collection of assembly language helper functions, offering functionality that closely parallels the string manipulation capabilities found in the C standard library `string.h`.
 
 ## Description
 
@@ -18,11 +18,11 @@ The library implements the following functions:
 - `read` as `my_read`
 - `write` as `my_write`
 
-Each function is contained within its own `.s` file, with parallel C functions in `my_libasm.c` for calling the assembly functions. The automated build process creates an executable program as well as static and dynamic libraries.
+Each function is contained within its own `.S` file. The automated build process creates an executable program as well as static and dynamic libraries.
 
 ## Installation
 
-Designed for Linux systems with an X86-64 architecture. To compile the library and its components, run the Makefile from the project repository.
+This program will only compile on Linux systems with an X86-64 architecture. To compile the library and its components, run the Makefile from the project repository.
 
 Compile:
 
@@ -30,7 +30,7 @@ Compile:
 make
 ```
 
-Clean up compiled objects and libraries:
+Clean up:
 
 ```bash
 make fclean
