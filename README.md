@@ -6,17 +6,17 @@ Welcome to `string_lib_asm`, A collection of assembly language helper functions,
 
 The library implements the following functions:
 
-- `strlen` replicated as `my_strlen`
-- `strchr` replicated as `my_strchr`
-- `memset` replicated as `my_memset`
-- `memcpy` replicated as `my_memcpy`
-- `strcmp` replicated as `my_strcmp`
-- `memmove` replicated as `my_memmove`
-- `strncmp` replicated as `my_strncmp`
-- `strcasecmp` replicated as `my_strcasecmp`
-- `index` replicated as `my_index`
-- `read` replicated as `my_read`
-- `write` replicated as `my_write`
+- `strlen` as `my_strlen`
+- `strchr` as `my_strchr`
+- `memset` as `my_memset`
+- `memcpy` as `my_memcpy`
+- `strcmp` as `my_strcmp`
+- `memmove` as `my_memmove`
+- `strncmp` as `my_strncmp`
+- `strcasecmp` as `my_strcasecmp`
+- `index` as `my_index`
+- `read` as `my_read`
+- `write` as `my_write`
 
 Each function is contained within its own `.s` file, with parallel C functions in `my_libasm.c` for calling the assembly functions. The automated build process creates an executable program as well as static and dynamic libraries.
 
