@@ -8,13 +8,15 @@ section .text
     ;   rdx = n (number of bytes to be copied into dest from source)
     ; Output: 
     ;   rax = memory address for destination
-     cmp rdx, 0          ; check if n is zero 
+
+    cmp rdx, 0          ; check if n is zero 
     je .done
 
-     ; check the relative locations of dest and source
+    ; check the relative locations of dest and source
     ; if destination is at a higher address, copy memory backwards to avoid writing over data
     cmp rdi, rsi            
     jae .backwards_copy     ; jump if above or equal
+    
  .forwards_copy:
     mov rcx, rdx        ; move number of bytes to copy into rcx to set up next instruction
     rep movsb           ; this command will move rcx bytes from rsi into rdi
